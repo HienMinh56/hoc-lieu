@@ -1,0 +1,501 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Python Product</title>
+    <link rel="stylesheet" href="style.css" />
+    <script type="text/javascript" src="app.js" defer></script>
+  </head>
+  <body>
+    <nav id="sidebar">
+      <ul>
+        <li>
+          <span class="logo">Học liệu</span>
+          <button onclick="toggleSidebar()" id="toggle-btn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+              fill="#e8eaed"
+            >
+              <path
+                d="m313-480 155 156q11 11 11.5 27.5T468-268q-11 11-28 11t-28-11L228-452q-6-6-8.5-13t-2.5-15q0-8 2.5-15t8.5-13l184-184q11-11 27.5-11.5T468-692q11 11 11 28t-11 28L313-480Zm264 0 155 156q11 11 11.5 27.5T732-268q-11 11-28 11t-28-11L492-452q-6-6-8.5-13t-2.5-15q0-8 2.5-15t8.5-13l184-184q11-11 27.5-11.5T732-692q11 11 11 28t-11 28L577-480Z"
+              />
+            </svg>
+          </button>
+        </li>
+        <li>
+          <a href="index.html">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+              fill="#e8eaed"
+            >
+              <path
+                d="M240-200h120v-200q0-17 11.5-28.5T400-440h160q17 0 28.5 11.5T600-400v200h120v-360L480-740 240-560v360Zm-80 0v-360q0-19 8.5-36t23.5-28l240-180q21-16 48-16t48 16l240 180q15 11 23.5 28t8.5 36v360q0 33-23.5 56.5T720-120H560q-17 0-28.5-11.5T520-160v-200h-80v200q0 17-11.5 28.5T400-120H240q-33 0-56.5-23.5T160-200Zm320-270Z"
+              />
+            </svg>
+            <span>Trang chủ</span>
+          </a>
+        </li>
+        <li>
+          <button onclick="toggleSubMenu(this)" class="dropdown-btn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+              fill="#e8eaed"
+            >
+              <path
+                d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h207q16 0 30.5 6t25.5 17l57 57h320q33 0 56.5 23.5T880-640v400q0 33-23.5 56.5T800-160H160Zm0-80h640v-400H447l-80-80H160v480Zm0 0v-480 480Zm400-160v40q0 17 11.5 28.5T600-320q17 0 28.5-11.5T640-360v-40h40q17 0 28.5-11.5T720-440q0-17-11.5-28.5T680-480h-40v-40q0-17-11.5-28.5T600-560q-17 0-28.5 11.5T560-520v40h-40q-17 0-28.5 11.5T480-440q0 17 11.5 28.5T520-400h40Z"
+              />
+            </svg>
+            <span>Cấp học</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+              fill="#e8eaed"
+            >
+              <path
+                d="M480-361q-8 0-15-2.5t-13-8.5L268-556q-11-11-11-28t11-28q11-11 28-11t28 11l156 156 156-156q11-11 28-11t28 11q11 11 11 28t-11 28L508-372q-6 6-13 8.5t-15 2.5Z"
+              />
+            </svg>
+          </button>
+          <ul class="sub-menu">
+            <div>
+              <li><a href="#">Lớp 6</a></li>
+              <li><a href="#">Lớp 7</a></li>
+              <li><a href="#">Lớp 8</a></li>
+              <li><a href="#">Lớp 9</a></li>
+              <li><a href="#">Lớp 10</a></li>
+              <li><a href="#">Lớp 11</a></li>
+              <li><a href="#">Lớp 12</a></li>
+            </div>
+          </ul>
+        </li>
+        <li>
+          <button onclick="toggleSubMenu(this)" class="dropdown-btn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+              fill="#5e63ff"
+            >
+              <path
+                d="m221-313 142-142q12-12 28-11.5t28 12.5q11 12 11 28t-11 28L250-228q-12 12-28 12t-28-12l-86-86q-11-11-11-28t11-28q11-11 28-11t28 11l57 57Zm0-320 142-142q12-12 28-11.5t28 12.5q11 12 11 28t-11 28L250-548q-12 12-28 12t-28-12l-86-86q-11-11-11-28t11-28q11-11 28-11t28 11l57 57Zm339 353q-17 0-28.5-11.5T520-320q0-17 11.5-28.5T560-360h280q17 0 28.5 11.5T880-320q0 17-11.5 28.5T840-280H560Zm0-320q-17 0-28.5-11.5T520-640q0-17 11.5-28.5T560-680h280q17 0 28.5 11.5T880-640q0 17-11.5 28.5T840-600H560Z"
+              />
+            </svg>
+            <span style="color: #5e63ff">Sản phẩm</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+              fill="#e8eaed"
+            >
+              <path
+                d="M480-361q-8 0-15-2.5t-13-8.5L268-556q-11-11-11-28t11-28q11-11 28-11t28 11l156 156 156-156q11-11 28-11t28 11q11 11 11 28t-11 28L508-372q-6 6-13 8.5t-15 2.5Z"
+              />
+            </svg>
+          </button>
+          <ul class="sub-menu">
+            <div>
+              <li>
+                <a href="scratch-product.html">Sản phẩm Sratch</a>
+              </li>
+              <li class="active">
+                <a href="python-product.html">Code Python</a>
+              </li>
+              <li><a href="web-product.html">Code web</a></li>
+            </div>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <div class="container">
+        <h2>Sản phẩm Python từng tiết</h2>
+        <p>
+          Dưới đây là toàn bộ sản phẩm Python mà thầy sử dụng trong quá trình
+          giảng dạy tại lớp. Học sinh có thể truy cập để: Ôn lại kiến thức đã
+          học Xem trước bài mới Luyện tập thêm các bài thực hành Tự học mọi lúc,
+          mọi nơi, không phụ thuộc vào thời gian lên lớp
+        </p>
+        <h4>
+          👉 Mục tiêu: giúp học sinh học chủ động hơn, hiểu bản chất vấn đề.
+        </h4>
+      </div>
+      <div class="container">
+        <h2>Ghi chú</h2>
+        <p>
+          Trong các file Python, thầy đã thêm các comment để giải thích từng
+          bước thực hiện. Học sinh có thể đọc comment để hiểu rõ hơn về cách
+          code hoạt động và cách áp dụng kiến thức vào thực tế. Nếu có bất kỳ
+          câu hỏi nào, đừng ngần ngại hỏi thầy hoặc bạn bè để được giải đáp nhé!
+          <br />
+          Đối với những câu có 2 cách giải thầy có comment lại từng cách, nếu
+          các bạn muốn chạy hãy xóa dấu # ở đầu dòng để chạy nhé!
+        </p>
+      </div>
+      <hr />
+      <br />
+      <div class="container">
+        <h2 style="color: aqua">Chủ đề F Bài 9 Thực hành câu lệnh lặp</h2>
+
+        <!-- Tab navigation -->
+        <div class="code-tabs">
+          <button class="tab-btn active" onclick="openTab(event, 'bai1')">
+            Bài 1
+          </button>
+          <button class="tab-btn" onclick="openTab(event, 'bai2')">
+            Bài 2
+          </button>
+          <button class="tab-btn" onclick="openTab(event, 'bai3')">
+            Bài 3
+          </button>
+          <button class="tab-btn" onclick="openTab(event, 'bai4')">
+            Bài 4
+          </button>
+          <button class="tab-btn" onclick="openTab(event, 'bai5')">
+            Bài 5
+          </button>
+          <button class="tab-btn" onclick="openTab(event, 'bai6')">
+            Bài 6
+          </button>
+        </div>
+
+        <!-- Bài 1 -->
+        <div id="bai1" class="tab-content active">
+          <div class="exercise-description">
+            <p>
+              <strong>Bài 1 SGK:</strong> Em hãy dự đoán xem chương trình ở Hình
+              1 sau đây sẽ đưa ra màn hình những gì. Chạy chương trình để kiểm
+              tra kết quả (Stop tại 5)
+            </p>
+          </div>
+          <div class="code-editor-wrapper">
+            <div class="editor-header">
+              <span>Python Code</span>
+              <button class="run-btn" onclick="runPython('bai1')">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="20px"
+                  viewBox="0 -960 960 960"
+                  width="20px"
+                  fill="#fff"
+                >
+                  <path d="M320-200v-560l440 280-440 280Z" />
+                </svg>
+                Run
+              </button>
+            </div>
+            <textarea class="code-editor" id="code-bai1">
+i = 1
+total = 0
+while total < 10:
+    i += 1
+    total += i
+    print("i =", i, " total =", total)
+            </textarea>
+            <div class="output-header">Output</div>
+            <pre class="code-output" id="output-bai1"></pre>
+          </div>
+        </div>
+
+        <!-- Bài 2 -->
+        <div id="bai2" class="tab-content">
+          <div class="exercise-description">
+            <p>
+              <strong>Bài 2 SGK:</strong> Bạn Hà viết chương trình để đếm xem số
+              nguyên n nhập vào từ bàn phím có bao nhiêu ước số thực sự (ước
+              khác 1 và n). Tuy nhiên, chương trình chạy kết quả sai. Em hãy sửa
+              lỗi giúp bạn Hà.
+            </p>
+          </div>
+          <div class="code-editor-wrapper">
+            <div class="editor-header">
+              <span>Python Code</span>
+              <button class="run-btn" onclick="runPythonWithInput('bai2')">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="20px"
+                  viewBox="0 -960 960 960"
+                  width="20px"
+                  fill="#fff"
+                >
+                  <path d="M320-200v-560l440 280-440 280Z" />
+                </svg>
+                Run
+              </button>
+            </div>
+            <div class="input-section">
+              <label>Nhập số n:</label>
+              <textarea
+                class="input-area"
+                id="input-bai2"
+                placeholder="Nhập một số nguyên (VD: 12, 24, 36...)"
+              >
+12
+              </textarea>
+            </div>
+            <textarea class="code-editor" id="code-bai2">
+# Đã sửa lỗi: thêm dấu : và đưa print ra ngoài while
+n = int(input("Nhập số n: "))
+i = 2
+so_uoc = 0
+while i <= n // 2: # VD: 9 // 2 = 4 || 9 / 2 = 4.5 đã. Đã sửa thiếu :
+    if n % i == 0:
+        so_uoc += 1
+    i += 1
+print(n, "có số ước thực sự là", so_uoc)
+            </textarea>
+            <div class="output-header">Output</div>
+            <pre class="code-output" id="output-bai2"></pre>
+          </div>
+        </div>
+
+        <!-- Bài 3 -->
+        <div id="bai3" class="tab-content">
+          <div class="exercise-description">
+            <p>
+              <strong>Bài 3 SGK:</strong> Viết chương trình yêu cầu người dùng
+              nhập một số nguyên lớn hơn 1.000.000. Chừng nào người dùng nhập
+              chưa đúng yêu cầu thì có thông báo yêu cầu nhập lại.
+            </p>
+          </div>
+          <div class="code-editor-wrapper">
+            <div class="editor-header">
+              <span>Python Code</span>
+              <button class="run-btn" onclick="runPythonWithInput('bai3')">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="20px"
+                  viewBox="0 -960 960 960"
+                  width="20px"
+                  fill="#fff"
+                >
+                  <path d="M320-200v-560l440 280-440 280Z" />
+                </svg>
+                Run
+              </button>
+            </div>
+            <div class="input-section">
+              <label>Nhập các giá trị input (mỗi dòng một giá trị):</label>
+              <textarea
+                class="input-area"
+                id="input-bai3"
+                placeholder="Ví dụ:
+500000
+800000
+1500000
+(Mỗi lần gọi input() sẽ lấy 1 dòng)"
+              >
+500000
+800000
+1500000
+            </textarea
+              >
+            </div>
+            <textarea class="code-editor" id="code-bai3">
+so_nguyen = int(input("Nhập số nguyên lớn hơn 1 000 000: "))
+while so_nguyen <= 1000000:
+    print("Số bạn nhập chưa đúng yêu cầu, vui lòng thử lại.")
+    so_nguyen = int(input("Nhập số nguyên lớn hơn 1 000 000: "))
+print("Cảm ơn, bạn đã nhập dữ liệu đúng yêu cầu.")
+            </textarea>
+            <div class="output-header">Output</div>
+            <pre class="code-output" id="output-bai3"></pre>
+          </div>
+        </div>
+
+        <!-- Bài 4 -->
+        <div id="bai4" class="tab-content">
+          <div class="exercise-description">
+            <p>
+              <strong>Bài 4 SGK:</strong> Giải bài toán cổ: Vừa gà vừa chó, bó
+              lại cho tròn, 36 con, 100 chân. Hỏi có bao nhiêu gà, bao nhiêu
+              chó?
+            </p>
+          </div>
+          <div class="code-editor-wrapper">
+            <div class="editor-header">
+              <span>Python Code</span>
+              <button class="run-btn" onclick="runPython('bai4')">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="20px"
+                  viewBox="0 -960 960 960"
+                  width="20px"
+                  fill="#fff"
+                >
+                  <path d="M320-200v-560l440 280-440 280Z" />
+                </svg>
+                Run
+              </button>
+            </div>
+            <textarea class="code-editor" id="code-bai4">
+for ga in range(1, 37):  # ga từ 1 đến 36
+    cho = 36 - ga
+    if (ga * 2 + cho * 4) == 100:
+        print("Số gà:", ga, "con")
+        print("Số chó:", cho, "con")
+        break
+            </textarea>
+            <div class="output-header">Output</div>
+            <pre class="code-output" id="output-bai4"></pre>
+          </div>
+        </div>
+
+        <!-- Bài 5 -->
+        <div id="bai5" class="tab-content">
+          <div class="exercise-description">
+            <p>
+              <strong>Bài 5 SGK:</strong> Viết chương trình kiểm tra bảng nhân
+              6. (Demo không có input)
+            </p>
+          </div>
+          <div class="code-editor-wrapper">
+            <div class="editor-header">
+              <span>Python Code</span>
+              <button class="run-btn" onclick="runPython('bai5')">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="20px"
+                  viewBox="0 -960 960 960"
+                  width="20px"
+                  fill="#fff"
+                >
+                  <path d="M320-200v-560l440 280-440 280Z" />
+                </svg>
+                Run
+              </button>
+            </div>
+            <textarea class="code-editor" id="code-bai5">
+# Demo bảng nhân 6
+bang = 6
+print("=== BẢNG NHÂN 6 ===")
+for i in range(1, 11):
+    dap_an = i * bang
+    print(f"{bang} x {i} = {dap_an}")
+            </textarea>
+            <div class="output-header">Output</div>
+            <pre class="code-output" id="output-bai5"></pre>
+          </div>
+        </div>
+
+        <!-- Bài 6 -->
+        <div id="bai6" class="tab-content">
+          <div class="exercise-description">
+            <p>
+              <strong>Bài 6 SGK:</strong> Thử nghiệm lâm sàng vacxin: Kiểm tra
+              độ tuổi 18-64 và BMI từ 18.5 đến 22.9
+            </p>
+          </div>
+          <div class="code-editor-wrapper">
+            <div class="editor-header">
+              <span>Python Code</span>
+              <button class="run-btn" onclick="runPythonWithInput('bai6')">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="20px"
+                  viewBox="0 -960 960 960"
+                  width="20px"
+                  fill="#fff"
+                >
+                  <path d="M320-200v-560l440 280-440 280Z" />
+                </svg>
+                Run
+              </button>
+            </div>
+            <div class="input-section">
+              <label
+                >Nhập dữ liệu hồ sơ (mỗi dòng 1 giá trị: tuổi, cân nặng, chiều
+                cao):</label
+              >
+              <textarea
+                class="input-area"
+                id="input-bai6"
+                placeholder="Ví dụ:
+25 (tuổi người 1)
+60 (cân nặng kg)
+1.70 (chiều cao m)
+30 (tuổi người 2)
+55
+1.60
+0 (nhập 0 để kết thúc)"
+              >
+25
+60
+1.70
+70
+65
+1.65
+30
+55
+1.60
+0
+            </textarea
+              >
+            </div>
+            <textarea class="code-editor" id="code-bai6">
+p = 1
+dem = 0
+
+while True:
+    print("Nhập hồ sơ người thứ:", p)
+    tuoi = int(input("Nhập tuổi (nhập 0 để kết thúc): "))
+    if tuoi == 0:
+        break
+
+    can_nang = float(input("Nhập cân nặng (kg): "))
+    chieu_cao = float(input("Nhập chiều cao (m): "))
+
+    bmi = can_nang / (chieu_cao ** 2)
+
+    if 18 <= tuoi <= 64 and 18.5 <= bmi <= 22.9:
+        dem += 1   # ĐẾM NGƯỜI ĐẠT
+
+    p += 1        # ĐẾM HỒ SƠ
+
+print("Số người được xét để tham gia thử nghiệm là:", dem)
+            </textarea>
+            <div class="output-header">Output</div>
+            <pre class="code-output" id="output-bai6"></pre>
+          </div>
+        </div>
+
+        <div class="download-section">
+          <a href="files/class10/F9.py" download class="download-btn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="20px"
+              viewBox="0 -960 960 960"
+              width="20px"
+              fill="#fff"
+            >
+              <path
+                d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z"
+              />
+            </svg>
+            Tải file code Bài 9 Chủ đề F
+          </a>
+        </div>
+      </div>
+
+      <div class="container">
+        <h2 style="color: aqua">
+          Chủ đề F Bài 10 Chương Trình Con Và Thư Viện Các Chương Trình Con Có
+          Sẵn
+        </h2>
+      </div>
+    </main>
+  </body>
+</html>
