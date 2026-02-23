@@ -128,6 +128,22 @@
             </div>
           </ul>
         </li>
+        <li>
+          <a href="./contact.html">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+              fill="#e8eaed"
+            >
+              <path
+                d="M200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-40q0-17 11.5-28.5T280-880q17 0 28.5 11.5T320-840v40h320v-40q0-17 11.5-28.5T680-880q17 0 28.5 11.5T720-840v40h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Zm0-480h560v-80H200v80Zm0 0v-80 80Zm280 240q-17 0-28.5-11.5T440-440q0-17 11.5-28.5T480-480q17 0 28.5 11.5T520-440q0 17-11.5 28.5T480-400Zm-160 0q-17 0-28.5-11.5T280-440q0-17 11.5-28.5T320-480q17 0 28.5 11.5T360-440q0 17-11.5 28.5T320-400Zm320 0q-17 0-28.5-11.5T600-440q0-17 11.5-28.5T640-480q17 0 28.5 11.5T680-440q0 17-11.5 28.5T640-400ZM480-240q-17 0-28.5-11.5T440-280q0-17 11.5-28.5T480-320q17 0 28.5 11.5T520-280q0 17-11.5 28.5T480-240Zm-160 0q-17 0-28.5-11.5T280-280q0-17 11.5-28.5T320-320q17 0 28.5 11.5T360-280q0 17-11.5 28.5T320-240Zm320 0q-17 0-28.5-11.5T600-280q0-17 11.5-28.5T640-320q17 0 28.5 11.5T680-280q0 17-11.5 28.5T640-240Z"
+              />
+            </svg>
+            <span>Liên hệ</span>
+          </a>
+        </li>
       </ul>
     </nav>
     <main>
@@ -500,11 +516,223 @@ print("Số người được xét để tham gia thử nghiệm là:", dem)
         </div>
       </div>
 
+      <hr />
+      <br />
+
       <div class="container">
         <h2 style="color: aqua">
           Chủ đề F Bài 10 Chương Trình Con Và Thư Viện Các Chương Trình Con Có
           Sẵn
         </h2>
+
+        <!-- Tab navigation F10 -->
+        <div class="code-tabs">
+          <button
+            class="tab-btn active"
+            onclick="openTabF10(event, 'f10-bai1')"
+          >
+            Bài 1
+          </button>
+          <button class="tab-btn" onclick="openTabF10(event, 'f10-bai2')">
+            Bài 2
+          </button>
+          <button class="tab-btn" onclick="openTabF10(event, 'f10-bai3')">
+            Bài 3
+          </button>
+        </div>
+
+        <!-- Bài 1 - BSCNN -->
+        <div id="f10-bai1" class="tab-content-f10 active">
+          <div class="exercise-description">
+            <p>
+              <strong>Bài 1:</strong> Với hàm BSCNN được xây dựng ở chương trình
+              sau đây (Hình 8), trong những dòng lệnh có sử dụng hàm BSCNN, dòng
+              lệnh nào đúng, dòng lệnh nào sai và tại sao?
+            </p>
+          </div>
+          <div class="code-editor-wrapper">
+            <div class="editor-header">
+              <span>Python Code</span>
+              <button class="run-btn" onclick="runPythonWithInput('f10-bai1')">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="20px"
+                  viewBox="0 -960 960 960"
+                  width="20px"
+                  fill="#fff"
+                >
+                  <path d="M320-200v-560l440 280-440 280Z" />
+                </svg>
+                Run
+              </button>
+            </div>
+            <div class="input-section">
+              <label>Nhập a và b (mỗi dòng một giá trị):</label>
+              <textarea
+                class="input-area"
+                id="input-f10-bai1"
+                placeholder="Nhập 2 số nguyên dương"
+              >
+12
+18</textarea
+              >
+            </div>
+            <textarea class="code-editor" id="code-f10-bai1">
+from math import gcd
+
+def BSCNN(x, y):
+    return x*y // gcd(x, y)
+
+a = int(input("a = "))
+b = int(input("b = "))
+
+print("Bội số chung nhỏ nhất của", a, "và", b, "là:", BSCNN(a, b))
+
+c = a + b + BSCNN(a, b)
+print("c =", c)
+            </textarea>
+            <div class="output-header">Output</div>
+            <pre class="code-output" id="output-f10-bai1"></pre>
+          </div>
+        </div>
+
+        <!-- Bài 2 - Diện tích tam giác Heron -->
+        <div id="f10-bai2" class="tab-content-f10">
+          <div class="exercise-description">
+            <p>
+              <strong>Bài 2:</strong> Chương trình ở (Hình 9), xây dựng một hàm
+              tính diện tích một tam giác bằng công thức Heron theo ba cạnh của
+              tam giác. Em hãy hoàn thiện chương trình bằng lời gọi hàm thích
+              hợp để đưa ra màn hình kết quả diện tích của tam giác có ba cạnh
+              là 3, 4, 5.
+            </p>
+          </div>
+          <div class="code-editor-wrapper">
+            <div class="editor-header">
+              <span>Python Code</span>
+              <button class="run-btn" onclick="runPython('f10-bai2')">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="20px"
+                  viewBox="0 -960 960 960"
+                  width="20px"
+                  fill="#fff"
+                >
+                  <path d="M320-200v-560l440 280-440 280Z" />
+                </svg>
+                Run
+              </button>
+            </div>
+            <textarea class="code-editor" id="code-f10-bai2">
+def dientichtg(a, b, c):
+    p = (a + b + c) / 2
+    s = p * (p - a) * (p - b) * (p - c)
+    return s ** 0.5
+
+# Test với tam giác có 3 cạnh là 3, 4, 5
+print("Diện tích tam giác có ba cạnh là 3, 4, 5 là:", dientichtg(3, 4, 5))
+            </textarea>
+            <div class="output-header">Output</div>
+            <pre class="code-output" id="output-f10-bai2"></pre>
+          </div>
+        </div>
+
+        <!-- Bài 3 - Tính diện tích 3 tam giác -->
+        <div id="f10-bai3" class="tab-content-f10">
+          <div class="exercise-description">
+            <p>
+              <strong>Bài 3:</strong> Sử dụng kết quả của Bài 2 phần Luyện tập,
+              em hãy viết chương trình giải bài toán ở Hoạt động 1. Tính diện
+              tích 3 tam giác và tìm diện tích lớn nhất.
+            </p>
+          </div>
+          <div class="code-editor-wrapper">
+            <div class="editor-header">
+              <span>Python Code</span>
+              <button class="run-btn" onclick="runPythonWithInput('f10-bai3')">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="20px"
+                  viewBox="0 -960 960 960"
+                  width="20px"
+                  fill="#fff"
+                >
+                  <path d="M320-200v-560l440 280-440 280Z" />
+                </svg>
+                Run
+              </button>
+            </div>
+            <div class="input-section">
+              <label>Nhập 9 cạnh cho 3 tam giác (a,b,c / u,v,w / p,q,r):</label>
+              <textarea
+                class="input-area"
+                id="input-f10-bai3"
+                placeholder="9 giá trị, mỗi dòng 1 giá trị
+Tam giác 1: a, b, c
+Tam giác 2: u, v, w
+Tam giác 3: p, q, r"
+              >
+3
+4
+5
+5
+12
+13
+8
+15
+17</textarea
+              >
+            </div>
+            <textarea class="code-editor" id="code-f10-bai3">
+def dientich(a, b, c):
+    p = (a + b + c) / 2
+    s = p * (p - a) * (p - b) * (p - c)
+    return s ** 0.5
+
+# Nhập 3 cạnh tam giác 1
+a = float(input("a = "))
+b = float(input("b = "))
+c = float(input("c = "))
+
+# Nhập 3 cạnh tam giác 2
+u = float(input("u = "))
+v = float(input("v = "))
+w = float(input("w = "))
+
+# Nhập 3 cạnh tam giác 3
+p = float(input("p = "))
+q = float(input("q = "))
+r = float(input("r = "))
+
+# Tính diện tích
+s1 = dientich(a, b, c)
+s2 = dientich(u, v, w)
+s3 = dientich(p, q, r)
+
+print("Diện tích của 3 tam giác lần lượt là:", round(s1, 2), round(s2, 2), round(s3, 2))
+print("Diện tích lớn nhất là:", round(max(s1, s2, s3), 2))
+            </textarea>
+            <div class="output-header">Output</div>
+            <pre class="code-output" id="output-f10-bai3"></pre>
+          </div>
+        </div>
+
+        <div class="download-section">
+          <a href="files/class10/F10.py" download class="download-btn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="20px"
+              viewBox="0 -960 960 960"
+              width="20px"
+              fill="#fff"
+            >
+              <path
+                d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z"
+              />
+            </svg>
+            Tải file code Bài 10 Chủ đề F
+          </a>
+        </div>
       </div>
     </main>
   </body>

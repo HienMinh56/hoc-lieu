@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lớp 12</title>
+    <link rel="stylesheet" href="../style.css" />
+    <script type="text/javascript" src="../app.js" defer></script>
+  </head>
+  <body>
+    <nav id="sidebar">
+      <ul>
+        <li>
+          <span class="logo">Học liệu</span>
+          <button onclick="toggleSidebar()" id="toggle-btn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+              fill="#e8eaed"
+            >
+              <path
+                d="m313-480 155 156q11 11 11.5 27.5T468-268q-11 11-28 11t-28-11L228-452q-6-6-8.5-13t-2.5-15q0-8 2.5-15t8.5-13l184-184q11-11 27.5-11.5T468-692q11 11 11 28t-11 28L313-480Zm264 0 155 156q11 11 11.5 27.5T732-268q-11 11-28 11t-28-11L492-452q-6-6-8.5-13t-2.5-15q0-8 2.5-15t8.5-13l184-184q11-11 27.5-11.5T732-692q11 11 11 28t-11 28L577-480Z"
+              />
+            </svg>
+          </button>
+        </li>
+        <li>
+          <a href="./index.html">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+              fill="#e8eaed"
+            >
+              <path
+                d="M240-200h120v-200q0-17 11.5-28.5T400-440h160q17 0 28.5 11.5T600-400v200h120v-360L480-740 240-560v360Zm-80 0v-360q0-19 8.5-36t23.5-28l240-180q21-16 48-16t48 16l240 180q15 11 23.5 28t8.5 36v360q0 33-23.5 56.5T720-120H560q-17 0-28.5-11.5T520-160v-200h-80v200q0 17-11.5 28.5T400-120H240q-33 0-56.5-23.5T160-200Zm320-270Z"
+              />
+            </svg>
+            <span>Trang chủ</span>
+          </a>
+        </li>
+        <li>
+          <button onclick="toggleSubMenu(this)" class="dropdown-btn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+              fill="#e8eaed"
+            >
+              <path
+                d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h207q16 0 30.5 6t25.5 17l57 57h320q33 0 56.5 23.5T880-640v400q0 33-23.5 56.5T800-160H160Zm0-80h640v-400H447l-80-80H160v480Zm0 0v-480 480Zm400-160v40q0 17 11.5 28.5T600-320q17 0 28.5-11.5T640-360v-40h40q17 0 28.5-11.5T720-440q0-17-11.5-28.5T680-480h-40v-40q0-17-11.5-28.5T600-560q-17 0-28.5 11.5T560-520v40h-40q-17 0-28.5 11.5T480-440q0 17 11.5 28.5T520-400h40Z"
+              />
+            </svg>
+            <span>Cấp học</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+              fill="#e8eaed"
+            >
+              <path
+                d="M480-361q-8 0-15-2.5t-13-8.5L268-556q-11-11-11-28t11-28q11-11 28-11t28 11l156 156 156-156q11-11 28-11t28 11q11 11 11 28t-11 28L508-372q-6 6-13 8.5t-15 2.5Z"
+              />
+            </svg>
+          </button>
+          <ul class="sub-menu">
+            <div>
+              <li><a href="#">Lớp 6</a></li>
+              <li><a href="#">Lớp 7</a></li>
+              <li><a href="#">Lớp 8</a></li>
+              <li><a href="#">Lớp 9</a></li>
+              <li>
+                <a
+                  href="https://hienminh56.github.io/hoc-lieu/classes/class10.html"
+                  >Lớp 10</a
+                >
+              </li>
+              <li><a href="#">Lớp 11</a></li>
+              <li class="active">
+                <a
+                  href="https://hienminh56.github.io/hoc-lieu/classes/class12.html"
+                  >Lớp 12</a
+                >
+              </li>
+            </div>
+          </ul>
+        </li>
+        <li>
+          <button onclick="toggleSubMenu(this)" class="dropdown-btn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+              fill="#e8eaed"
+            >
+              <path
+                d="m221-313 142-142q12-12 28-11.5t28 12.5q11 12 11 28t-11 28L250-228q-12 12-28 12t-28-12l-86-86q-11-11-11-28t11-28q11-11 28-11t28 11l57 57Zm0-320 142-142q12-12 28-11.5t28 12.5q11 12 11 28t-11 28L250-548q-12 12-28 12t-28-12l-86-86q-11-11-11-28t11-28q11-11 28-11t28 11l57 57Zm339 353q-17 0-28.5-11.5T520-320q0-17 11.5-28.5T560-360h280q17 0 28.5 11.5T880-320q0 17-11.5 28.5T840-280H560Zm0-320q-17 0-28.5-11.5T520-640q0-17 11.5-28.5T560-680h280q17 0 28.5 11.5T880-640q0 17-11.5 28.5T840-600H560Z"
+              />
+            </svg>
+            <span>Sản phẩm</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+              fill="#e8eaed"
+            >
+              <path
+                d="M480-361q-8 0-15-2.5t-13-8.5L268-556q-11-11-11-28t11-28q11-11 28-11t28 11l156 156 156-156q11-11 28-11t28 11q11 11 11 28t-11 28L508-372q-6 6-13 8.5t-15 2.5Z"
+              />
+            </svg>
+          </button>
+          <ul class="sub-menu">
+            <div>
+              <li>
+                <a href="./scratch-product.html">Sản phẩm Sratch</a>
+              </li>
+              <li>
+                <a href="./python-product.html">Code Python</a>
+              </li>
+              <li><a href="./web-product.html">Code web</a></li>
+            </div>
+          </ul>
+        </li>
+        <li class="active">
+          <a href="./contact.html">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+              fill="#5e63ff"
+            >
+              <path
+                d="M200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-40q0-17 11.5-28.5T280-880q17 0 28.5 11.5T320-840v40h320v-40q0-17 11.5-28.5T680-880q17 0 28.5 11.5T720-840v40h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Zm0-480h560v-80H200v80Zm0 0v-80 80Zm280 240q-17 0-28.5-11.5T440-440q0-17 11.5-28.5T480-480q17 0 28.5 11.5T520-440q0 17-11.5 28.5T480-400Zm-160 0q-17 0-28.5-11.5T280-440q0-17 11.5-28.5T320-480q17 0 28.5 11.5T360-440q0 17-11.5 28.5T320-400Zm320 0q-17 0-28.5-11.5T600-440q0-17 11.5-28.5T640-480q17 0 28.5 11.5T680-440q0 17-11.5 28.5T640-400ZM480-240q-17 0-28.5-11.5T440-280q0-17 11.5-28.5T480-320q17 0 28.5 11.5T520-280q0 17-11.5 28.5T480-240Zm-160 0q-17 0-28.5-11.5T280-280q0-17 11.5-28.5T320-320q17 0 28.5 11.5T360-280q0 17-11.5 28.5T320-240Zm320 0q-17 0-28.5-11.5T600-280q0-17 11.5-28.5T640-320q17 0 28.5 11.5T680-280q0 17-11.5 28.5T640-240Z"
+              />
+            </svg>
+            <span>Liên hệ</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <div class="container">
+        <h2>Mục liên hệ với thầy</h2>
+        <p>
+          Các bạn có thể gửi mail thầy hoặc liên hệ thầy qua các nền tảng bên
+          dưới!
+        </p>
+      </div>
+      <hr />
+      <br />
+      <div class="container">
+        <h2>Gửi tin nhắn</h2>
+        <form id="contact-form" class="contact-form">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Nhập họ tên của bạn"
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">Gmail</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Nhập địa chỉ Gmail"
+            />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="Nhập số điện thoại"
+            />
+          </div>
+          <div class="form-group">
+            <label for="message">Content <span class="required">*</span></label>
+            <textarea
+              id="message"
+              name="message"
+              class="item"
+              rows="5"
+              placeholder="Nhập nội dung tin nhắn"
+              required
+            ></textarea>
+            <span class="error-txt message">Content can't be blank</span>
+          </div>
+          <button type="submit" class="submit-btn">Gửi tin nhắn</button>
+        </form>
+      </div>
+      <div class="container">
+        <h2>Liên hệ qua mạng xã hội</h2>
+        <div class="social-links">
+          <a
+            href="https://discord.com/users/344845849819348992"
+            target="_blank"
+            class="social-icon discord"
+            title="Discord"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path
+                d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="config.js"></script>
+    <script>
+      const form = document.getElementById("contact-form");
+      const fullName = document.getElementById("name");
+      const email = document.getElementById("email");
+      const phone = document.getElementById("phone");
+      const mess = document.getElementById("message");
+      const submitBtn = form.querySelector(".submit-btn");
+
+      // Get API key from config.js
+      const ELASTIC_EMAIL_API_KEY = CONFIG.ELASTIC_EMAIL_API_KEY;
+
+      async function sendEmail() {
+        submitBtn.disabled = true;
+        submitBtn.textContent = "Đang gửi...";
+
+        const bodyHtml = `
+          <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+            <h2 style="color: #333; border-bottom: 2px solid #5e63ff; padding-bottom: 10px;">
+              Tin nhắn mới từ website Học liệu
+            </h2>
+            
+            <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 20px 0;">
+              <p><strong style="color: #333;">Họ tên:</strong> <span style="color: #666;">${fullName.value || "Không cung cấp"}</span></p>
+              <p><strong style="color: #333;">Email:</strong> <span style="color: #666;">${email.value || "Không cung cấp"}</span></p>
+              <p><strong style="color: #333;">Số điện thoại:</strong> <span style="color: #666;">${phone.value || "Không cung cấp"}</span></p>
+            </div>
+            
+            <div style="background: #fff; border-left: 4px solid #5e63ff; padding: 20px; margin: 20px 0;">
+              <h3 style="color: #333; margin-top: 0;">Nội dung:</h3>
+              <p style="color: #666; line-height: 1.6;">${mess.value}</p>
+            </div>
+            
+            <hr style="border: none; border-top: 1px solid #eee; margin: 30px 0;">
+            
+            <p style="color: #999; font-size: 12px; text-align: center;">
+              Email này được gửi từ form liên hệ website Học liệu
+            </p>
+          </div>
+        `;
+
+        const params = new URLSearchParams();
+        params.append("apikey", ELASTIC_EMAIL_API_KEY);
+        params.append("from", "dlhminh0506@gmail.com");
+        params.append(
+          "fromName",
+          `${fullName.value || "Người dùng"} via Học liệu Contact`,
+        );
+        params.append("to", "dlhminh0506@gmail.com");
+        params.append(
+          "subject",
+          `Liên hệ mới từ ${fullName.value || "Người dùng ẩn danh"}`,
+        );
+        params.append("bodyHtml", bodyHtml);
+        if (email.value) {
+          params.append("replyTo", email.value);
+          params.append("replyToName", fullName.value || "");
+        }
+
+        try {
+          const response = await axios.post(
+            "https://api.elasticemail.com/v2/email/send",
+            params,
+            {
+              headers: {
+                "Content-Type": "application/x-www-form-urlencoded",
+              },
+            },
+          );
+
+          if (response.data.success) {
+            Swal.fire({
+              title: "Thành công!",
+              text: "Tin nhắn đã được gửi thành công! Thầy sẽ phản hồi sớm nhất.",
+              icon: "success",
+            });
+            form.reset();
+          } else {
+            throw new Error(response.data.error || "Gửi email thất bại");
+          }
+        } catch (error) {
+          console.error("Email send failed:", error);
+          Swal.fire({
+            title: "Lỗi!",
+            text: "Không thể gửi tin nhắn. Vui lòng thử lại sau hoặc liên hệ trực tiếp: dlhminh0506@gmail.com",
+            icon: "error",
+          });
+        } finally {
+          submitBtn.disabled = false;
+          submitBtn.textContent = "Gửi tin nhắn";
+        }
+      }
+
+      function checkInputs() {
+        let isValid = true;
+
+        if (mess.value.trim() === "") {
+          mess.classList.add("error");
+          mess.parentElement.classList.add("error");
+          isValid = false;
+        } else {
+          mess.classList.remove("error");
+          mess.parentElement.classList.remove("error");
+        }
+
+        return isValid;
+      }
+
+      mess.addEventListener("keyup", () => {
+        if (mess.value.trim() !== "") {
+          mess.classList.remove("error");
+          mess.parentElement.classList.remove("error");
+        }
+      });
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        if (checkInputs()) {
+          sendEmail();
+        }
+      });
+    </script>
+  </body>
+</html>

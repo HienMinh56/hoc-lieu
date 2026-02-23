@@ -31,7 +31,7 @@ function closeAllSubMenus() {
 
 // ===== CODE EDITOR FUNCTIONS =====
 
-// Tab switching function
+// Tab switching function for F9
 function openTab(evt, tabId) {
   // Hide all tab contents
   const tabContents = document.getElementsByClassName("tab-content");
@@ -39,8 +39,29 @@ function openTab(evt, tabId) {
     tabContents[i].classList.remove("active");
   }
 
-  // Remove active class from all tab buttons
-  const tabBtns = document.getElementsByClassName("tab-btn");
+  // Remove active class from all tab buttons in the same container
+  const container = evt.currentTarget.closest(".code-tabs");
+  const tabBtns = container.getElementsByClassName("tab-btn");
+  for (let i = 0; i < tabBtns.length; i++) {
+    tabBtns[i].classList.remove("active");
+  }
+
+  // Show the current tab and add active class to the button
+  document.getElementById(tabId).classList.add("active");
+  evt.currentTarget.classList.add("active");
+}
+
+// Tab switching function for F10
+function openTabF10(evt, tabId) {
+  // Hide all F10 tab contents
+  const tabContents = document.getElementsByClassName("tab-content-f10");
+  for (let i = 0; i < tabContents.length; i++) {
+    tabContents[i].classList.remove("active");
+  }
+
+  // Remove active class from all tab buttons in the same container
+  const container = evt.currentTarget.closest(".code-tabs");
+  const tabBtns = container.getElementsByClassName("tab-btn");
   for (let i = 0; i < tabBtns.length; i++) {
     tabBtns[i].classList.remove("active");
   }
